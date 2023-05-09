@@ -65,10 +65,12 @@ export class LinkedList {
   }
 
   remove(index) {
-    // chack params
-    let leader = this.traverseToIndexPoint(index - 1);
-    let unwantedPoint = leader.next;
-    leader.next = unwantedPoint.next;
+    // chack params 1 => 10 => 45
+    let leader = this.traverseToIndexPoint(index - 1); // 1
+    let unwantedPoint = leader.next; // 10
+    let rightNode = unwantedPoint.next; // 45
+    rightNode.prev = leader; // 45's prev 1
+    leader.next = rightNode; // 1's next 45
     this.length--;
     return this;
   }
