@@ -1,5 +1,6 @@
 class Node {
   constructor(value) {
+    this.prev = null;
     this.value = value;
     this.next = null;
   }
@@ -8,6 +9,7 @@ class Node {
 export class LinkedList {
   constructor(value) {
     this.head = {
+      prev: null,
       value: value,
       next: null,
     };
@@ -21,6 +23,7 @@ export class LinkedList {
 
   append(value) {
     const node = this._createNode(value);
+    node.prev = this.tail;
     this.tail.next = node;
     this.tail = node;
     this.length++;
@@ -30,6 +33,7 @@ export class LinkedList {
   prepend(value) {
     const node = this._createNode(value);
     node.next = this.head;
+    this.head.prev = node;
     this.head = node;
     this.length++;
     return this;
@@ -51,8 +55,10 @@ export class LinkedList {
     }
     let node = this._createNode(value);
     let leader = this.traverseToIndexPoint(index - 1);
-    let holdingPoint = leader.next;
-    node.next = holdingPoint;
+    let follower = leader.next;
+    follower.prev = node;
+    node.prev = leader;
+    node.next = follower;
     leader.next = node;
     this.length++;
     return this;
