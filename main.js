@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import { HashTableFunc } from "./dataStructures/HashTables";
 import { LinkedListFunc } from "./dataStructures/LinkedList";
 import { StacksAndQueuesFunc } from "./dataStructures/StacksAndQueue";
+import { TreesFunc } from "./dataStructures/Trees";
 
 // <a href="https://vitejs.dev" target="_blank">
 //   <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -24,3 +25,4 @@ document.querySelector("#app").innerHTML = `
 HashTableFunc();
 LinkedListFunc();
 StacksAndQueuesFunc();
+TreesFunc();
