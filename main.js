@@ -6,6 +6,7 @@ import { LinkedListFunc } from "./dataStructures/LinkedList";
 import { StacksAndQueuesFunc } from "./dataStructures/StacksAndQueue";
 import { TreesFunc } from "./dataStructures/Trees";
 import { GraphFunc } from "./dataStructures/Graphs";
+import { recursiveFunc } from "./algorithm/Recursive";
 
 // <a href="https://vitejs.dev" target="_blank">
 //   <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -23,8 +24,12 @@ document.querySelector("#app").innerHTML = `
   </div>
 `;
 
-HashTableFunc();
-LinkedListFunc();
-StacksAndQueuesFunc();
-TreesFunc();
-GraphFunc();
+// Data structure started
+// HashTableFunc();
+// LinkedListFunc();
+// StacksAndQueuesFunc();
+// TreesFunc();
+// GraphFunc();
+
+// Algorithm started
+recursiveFunc();
