@@ -5,6 +5,7 @@ import { HashTableFunc } from "./dataStructures/HashTables";
 import { LinkedListFunc } from "./dataStructures/LinkedList";
 import { StacksAndQueuesFunc } from "./dataStructures/StacksAndQueue";
 import { TreesFunc } from "./dataStructures/Trees";
+import { GraphFunc } from "./dataStructures/Graphs";
 
 // <a href="https://vitejs.dev" target="_blank">
 //   <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -26,3 +27,4 @@ HashTableFunc();
 LinkedListFunc();
 StacksAndQueuesFunc();
 TreesFunc();
+GraphFunc();

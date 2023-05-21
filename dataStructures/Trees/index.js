@@ -17,16 +17,16 @@ function traverse(node) {
 
 export function TreesFunc() {
   console.log("Trees DS Completed!");
-  const tree = new BinarySearchTrees();
+  // const tree = new BinarySearchTrees();
 
-  tree.insert(9);
-  tree.insert(4);
-  tree.insert(20);
-  tree.insert(1);
-  tree.insert(6);
-  tree.insert(15);
-  tree.insert(170);
-  console.log("tree", tree.lookup(6));
-  console.log("tree 2", tree.lookup(20));
+  // tree.insert(9);
+  // tree.insert(4);
+  // tree.insert(20);
+  // tree.insert(1);
+  // tree.insert(6);
+  // tree.insert(15);
+  // tree.insert(170);
+  // console.log("tree", tree.lookup(6));
+  // console.log("tree 2", tree.lookup(20));
   // console.log("tree", JSON.stringify(traverse(tree.root)));
 }
