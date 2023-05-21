@@ -16,7 +16,7 @@ function traverse(node) {
 */
 
 export function TreesFunc() {
-  console.log("Trees DS Running!");
+  console.log("Trees DS Completed!");
   const tree = new BinarySearchTrees();
 
   tree.insert(9);
