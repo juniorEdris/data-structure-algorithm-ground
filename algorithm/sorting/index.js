@@ -1,9 +1,10 @@
 export function sortingFunc() {
-  console.log("Sorting algorithm is running!");
+  console.log("Sorting algorithm is completed till merge sort!");
 
-  console.log("bubble sort", bubbleSort(numbers));
-  console.log("selection sort", selectionSort(numbers));
-  console.log("insertion sort", insertionSort(numbers));
+  // console.log("bubble sort", bubbleSort(numbers));
+  // console.log("selection sort", selectionSort(numbers));
+  // console.log("insertion sort", insertionSort(numbers));
+  // console.log("merge sort", mergeSort(numbers));
 }
 
 function swap(arr, i, j) {
@@ -64,4 +65,47 @@ function insertionSort(arr) {
     }
     return arr;
   }
+}
+
+function mergeSort(arr) {
+  if (arr.length === 1) {
+    return arr;
+  }
+  // split array in into right and left
+
+  const length = arr.length;
+  const middle = Math.floor(length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+  // console.log({ left, right });
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  const res = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      res.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      res.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  while (leftIndex < left.length) {
+    res.push(left[leftIndex]);
+    leftIndex++;
+  }
+
+  while (rightIndex < right.length) {
+    res.push(right[rightIndex]);
+    rightIndex++;
+  }
+  // return res.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+  return res;
 }
