@@ -8,6 +8,7 @@ import { TreesFunc } from "./dataStructures/Trees";
 import { GraphFunc } from "./dataStructures/Graphs";
 import { recursiveFunc } from "./algorithm/Recursive";
 import { sortingFunc } from "./algorithm/sorting";
+import { BDFSfunc } from "./algorithm/BFS+DFS";
 
 // <a href="https://vitejs.dev" target="_blank">
 //   <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -35,3 +36,4 @@ document.querySelector("#app").innerHTML = `
 // Algorithm started
 recursiveFunc();
 sortingFunc();
+BDFSfunc();

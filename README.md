@@ -15,6 +15,7 @@
 
     > Recursion
     > Sorting (till merge sort)
+    > Bradth First/Depth First Search
 
 # Social Handles
 

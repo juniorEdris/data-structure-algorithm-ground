@@ -31,6 +31,7 @@ export class BinarySearchTrees {
         }
       }
     }
+    return this;
   }
   lookup(value) {
     if (!this.root) {
@@ -130,5 +131,88 @@ export class BinarySearchTrees {
         return true;
       }
     }
+  }
+
+  breadthFSearch() {
+    let currentNode = this.root;
+
+    let queue = [];
+    let list = [];
+    queue.push(currentNode);
+
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      list.push(currentNode.value);
+
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    return list;
+  }
+
+  breadthFSearchR(queue, list) {
+    if (!queue.length) {
+      return list;
+    }
+
+    let currentNode = queue.shift();
+    list.push(currentNode.value);
+
+    if (currentNode.left) {
+      queue.push(currentNode.left);
+    }
+    if (currentNode.right) {
+      queue.push(currentNode.right);
+    }
+    return this.breadthFSearchR(queue, list);
+  }
+
+  DFSInorder() {
+    return this.traverseInOrder(this.root, []);
+  }
+
+  DFSPreorder() {
+    return this.traversePreOrder(this.root, []);
+  }
+
+  DFSPostorder() {
+    return this.traversePostOrder(this.root, []);
+  }
+
+  traverseInOrder(node, list) {
+    if (node.left) {
+      this.traverseInOrder(node.left, list);
+    }
+    list.push(node.value);
+    if (node.right) {
+      this.traverseInOrder(node.right, list);
+    }
+    return list;
+  }
+
+  traversePreOrder(node, list) {
+    list.push(node.value);
+    if (node.left) {
+      this.traversePreOrder(node.left, list);
+    }
+    if (node.right) {
+      this.traversePreOrder(node.right, list);
+    }
+    return list;
+  }
+
+  traversePostOrder(node, list) {
+    if (node.left) {
+      this.traversePostOrder(node.left, list);
+    }
+    if (node.right) {
+      this.traversePostOrder(node.right, list);
+    }
+    list.push(node.value);
+    return list;
   }
 }
