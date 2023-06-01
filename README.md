@@ -16,6 +16,7 @@
     > Recursion
     > Sorting (till merge sort)
     > Bradth First/Depth First Search
+    > Dynamic Programming
 
 # Social Handles
 
