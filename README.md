@@ -18,6 +18,9 @@
     > Bradth First/Depth First Search
     > Dynamic Programming
 
+
+    # FAANG
+
 # Social Handles
 
     > Github            https://github.com/juniorEdris

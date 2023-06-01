@@ -10,6 +10,7 @@ import { recursiveFunc } from "./algorithm/Recursive";
 import { sortingFunc } from "./algorithm/sorting";
 import { BDFSfunc } from "./algorithm/BFS+DFS";
 import { DynamicPrograms } from "./algorithm/DynamicProgramming";
+import { FAANGFunc } from "./FANNG_Chapter";
 
 // <a href="https://vitejs.dev" target="_blank">
 //   <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -35,7 +36,11 @@ document.querySelector("#app").innerHTML = `
 // GraphFunc();
 
 // Algorithm started
-recursiveFunc();
-sortingFunc();
-BDFSfunc();
-DynamicPrograms();
+// recursiveFunc();
+// sortingFunc();
+// BDFSfunc();
+// DynamicPrograms();
+
+// FAANG Chapter started!
+
+FAANGFunc();
